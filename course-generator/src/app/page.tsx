@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -20,31 +21,30 @@ export default function Home() {
             Create full courses with units and chapters using OpenAI. Pulls relevant YouTube videos, generates summaries, and creates quizzes — all with a Stripe-powered subscription model.
           </p>
           <div className="mt-8">
-            <a 
-              href="/dashboard"
-              className="rounded bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 transition-colors"
-            >
-              Get Started
-            </a>
+            <Button asChild>
+              <a href="/dashboard">Get Started</a>
+            </Button>
           </div>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://github.com/your-repo/course-generator"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+          <Button variant="outline" asChild>
+            <a
+              href="https://nextjs.org/docs"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Documentation
+            </a>
+          </Button>
+          <Button variant="secondary" asChild>
+            <a
+              href="https://github.com/your-repo/course-generator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+          </Button>
         </div>
       </main>
     </div>

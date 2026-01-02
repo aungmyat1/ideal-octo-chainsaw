@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Button } from "@/components/ui/button";
 
 export default function Dashboard() {
   const [courseTitle, setCourseTitle] = useState('');
@@ -41,17 +42,13 @@ export default function Dashboard() {
             />
           </div>
           
-          <button
+          <Button
             onClick={generateCourse}
             disabled={isLoading || !courseTitle.trim()}
-            className={`px-4 py-2 rounded-md text-white font-medium ${
-              isLoading || !courseTitle.trim()
-                ? 'bg-gray-400 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700'
-            }`}
+            className={isLoading ? 'opacity-70' : ''}
           >
             {isLoading ? 'Generating...' : 'Generate Course with AI'}
-          </button>
+          </Button>
         </div>
         
         <div className="bg-white rounded-lg shadow-md p-6">

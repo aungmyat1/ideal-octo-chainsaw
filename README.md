@@ -8,6 +8,14 @@
   - Server Components vs Client Components.
   - Next.js 13+ conventions (e.g., `page.tsx`, nested routes).
 
+## Set Up ShadCN
+
+- **Action**: Initialized ShadCN UI via CLI (`npx shadcn@latest init`) and added components like Button.
+- **Key Concepts**:
+  - Copy-based UI libraries (vs package installs).
+  - Customization via `tailwind.config.js` and CSS variables.
+  - Reusable, accessible components with Radix primitives.
+
 **What's Built**: An AI-powered course generator SaaS that creates full courses (units + chapters) using OpenAI, pulls relevant YouTube videos, generates summaries, and quizzes — all with a Stripe-powered subscription model.
 
 ## Tech Stack Preview
@@ -30,3 +38,5 @@ The project is organized in the [course-generator](file:///workspaces/ideal-octo
 - `src/app/page.tsx` - Landing page for the course generator
 - `src/app/dashboard/page.tsx` - Dashboard for creating and managing courses
 - `src/app/layout.tsx` - Root layout for the application
+- `src/components/ui/button.tsx` - ShadCN UI button component
+- `src/lib/utils.ts` - Utility functions for class names
